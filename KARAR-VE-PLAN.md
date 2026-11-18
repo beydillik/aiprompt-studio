@@ -115,5 +115,5 @@ Maketteki tasarım kararları:
 - Adım 3: değerlendirme ve `/`–`/app` kararı tamam; maket tuvalde (18 Kasım 2026).
 - Adım 4: tamamlandı (18 Kasım 2026). Tarayıcıdan doğrulandı: netlify.app adresi .com'a dönüyor (301), canonical etiketi sayfa kaynağında var.
 - Adım 5: tamamlandı. `main`'e birleştirildi (`a57356d`), canlıda (18 Kasım 2026). Yerel ölçüm (sayfa 8 KB'lık parçalarla yavaş yüklenerek): CLS masaüstü 0,156 → 0,014, mobil 0,466 → 0,000.
-- Adım 6: kısmen yapıldı (18 Kasım 2026, Kemal elle). Tamam: aiprompt-studio.com yeni tasarımla açılıyor; netlify.app → .com yönlendirmesi çalışıyor; canonical var. Kalan: 9 dil, 2 tema, mobil, 10 AI düğmesi, Cloudflare'in ölçmeye devam ettiği.
-- Sonraki: Adım 6'nın kalan kontrolleri, ardından Adım 7 (LinkedIn).
+- Adım 6: tamamlandı (18 Kasım 2026, Kemal elle). aiprompt-studio.com yeni tasarımla açılıyor; netlify.app → .com yönlendirmesi ve canonical çalışıyor; 9 dil, 2 tema, mobil, 10 AI düğmesi denendi; Cloudflare ölçüyor.
+- Sonraki: Adım 7 (claude.ai projesi, Opus 5.5) — LinkedIn gönderisi. Açı kararı "Açık notlar"daki öneriyle başlar.
