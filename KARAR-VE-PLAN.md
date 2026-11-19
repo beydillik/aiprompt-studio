@@ -48,7 +48,7 @@ Ek sinyal: Gumroad'daki $0+ ürününü alanların sayısı ve ödeme yapanlar.
 
 ## Açık notlar
 
-- LinkedIn gönderisi için önerilen açı: "güncelledim, artık ücretsiz" yerine "ilk ticari denemeden ne öğrendim" (aynı ürünün üçüncü paylaşımı olacağı için). Karar Adım 7'de.
+- LinkedIn açısı Adım 7'de karara bağlandı: "ne öğrendim" anlatısı bırakıldı, sakin bir güncelleme notu seçildi (aşağıda "Adım 7").
 - Tarayıcı konsolu hâlâ "LIVE selling mode" yazıyor; Adım 5'te düzeltilecek.
 - Koddaki iki değişiklik (Adım 1): `LICENSE.enabled: false` ve `buildChrome()` içinde `$("footCta").style.display = gatingOn() ? "" : "none";`.
 
@@ -108,6 +108,45 @@ Maketteki tasarım kararları:
 - **Sürükle-bırak dönemi bitti.** Bundan sonra canlı dosyanın tek kaynağı repodaki `index.html`; projedeki `index (1).html` eski (Adım 1 öncesi), temel alınmamalı.
 - Doğrulama sınırı: Claude oturumunun ağ izni aiprompt-studio.com ve netlify.app'e erişmiyor; 301 ve canonical kontrolü tarayıcıdan elle yapılır.
 
+## Adım 7: LinkedIn gönderisi (18–19 Kasım 2026)
+
+### Kararlar
+
+- **Açı:** "İlk ticari denemeden ne öğrendim" bırakıldı. Gönderi kısa ve sakin bir güncelleme notu: yenilenen arayüz ve tüm özelliklerin açık olduğu bilgisi. Satış ve trafik rakamları anılmıyor; proje "yan projelerimden biri" diye sunuluyor, ileriki projelere ipucu verilmiyor. Gerekçe: aynı ürünün üçüncü paylaşımı; Kemal'in yalnızca buna odaklandığı izlenimi istenmiyor.
+- **Dil:** Türkçe metin, altında kısa İngilizce özet.
+- **Link:** Yalnızca aiprompt-studio.com; Gumroad linki yok.
+- **Görsel:** 58,8 sn sessiz, alt yazılı tanıtım videosu (MP4, 1920×1200) ve kapak görüntüsü. Akış: arayüz dili (EN → DE → FR → TR), koyu temada 6 araç, açık temaya dönüş, Yeniden yaz aracında örnek metin, çıktı ayarları (English, Resmî, Basit), elle düzenleme, AI menüsü (10 yapay zekâ), ChatGPT'ye gönderme, ChatGPT'de komutun otomatik dolması ve cevap (Kemal'in ekran kaydından; gönderme tıklaması kesildi), kapanış kartı.
+- **Eski gönderiler:** Yeni gönderiden sonra her birine tek satırlık yorum eklenecek.
+
+### Onaylanan metin
+
+> Yan projelerimden AI Prompt Studio'yu güncelledim.
+>
+> Kısa notlarınızı ChatGPT, Claude, Gemini gibi araçlar için düzenli bir komuta çeviren küçük bir web aracı. Bu sürümde:
+>
+> • Arayüz yenilendi: not alanı genişledi, mobilde daha rahat kullanılıyor
+> • Tüm özellikler herkese açık, hesap ya da üyelik gerekmiyor
+> • Oluşan komutu elle düzenleyip 10 yapay zekâdan birine tek tıkla gönderebiliyorsunuz
+> • 9 dilde çalışıyor; notlarınız sunucuya değil tarayıcınıza kaydediliyor
+>
+> Denemek isterseniz: aiprompt-studio.com
+> Geri bildirimlere açığım.
+>
+> —
+> 🇬🇧 I've updated AI Prompt Studio, a small side project that turns rough notes into structured prompts for ChatGPT, Claude, Gemini and others. New interface, all features open, no sign-up, 9 languages, one-click send to 10 AI assistants. aiprompt-studio.com
+
+Eski gönderilere yorum:
+
+> Güncelleme (Kasım 2026): Arayüz yenilendi, tüm özellikler artık herkese açık, hesap gerekmiyor → aiprompt-studio.com
+
+### Sitedeki tanıtım videoları (19 Kasım 2026)
+
+- Eski tasarımla çekilmiş YouTube videoları yeni tanıtımlarla değiştirildi (`index.html` satır 306 ve 698–699):
+  - TR (58,8 sn, LinkedIn videosuyla aynı): https://youtu.be/X6zU0cCwBZs
+  - EN (52,4 sn, İngilizce arayüz ve alt yazı; ChatGPT ekranı yok, kapanış kartıyla biter): https://youtu.be/SRYPdpYqUew
+- Eski videolar (TR `WHdRLv1EH2Q`, EN `g3RTVGPs-Ec`) silinmedi; eski gönderilerden link verilmiş olabilir.
+- Videolar Playwright ile yerel `index.html` üzerinden kaydedildi. Kayıt betikleri ve video dosyaları repoda değil; dosyalar Kemal'de.
+
 ## Durum
 
 - Adım 1: kod canlıda ve gizli sekmede kontrol edildi (17 Kasım 2026). Kalan: Gumroad fiyatını $0+ yapmak ve sayfa metnini güncellemek (Kemal'de).
@@ -117,4 +156,5 @@ Maketteki tasarım kararları:
 - Adım 5: tamamlandı. `main`'e birleştirildi (`a57356d`), canlıda (18 Kasım 2026). Yerel ölçüm (sayfa 8 KB'lık parçalarla yavaş yüklenerek): CLS masaüstü 0,156 → 0,014, mobil 0,466 → 0,000.
 - Adım 6: tamamlandı (18 Kasım 2026, Kemal elle). aiprompt-studio.com yeni tasarımla açılıyor; netlify.app → .com yönlendirmesi ve canonical çalışıyor; 9 dil, 2 tema, mobil, 10 AI düğmesi denendi; Cloudflare ölçüyor.
 - Adım 6 sonrası düzeltme (18 Kasım 2026): alttaki bilgi bölümü (About, How it works, Privacy, SSS) seçilen arayüz diline çevriliyor (`T4`, 27 metin × 9 dil). Kaynak HTML İngilizce kalır, indeksleme için. Türkçe dışındaki çeviriler ana dili konuşan biri tarafından kontrol edilmedi.
-- Sonraki: Adım 7 (claude.ai projesi, Opus 5.5) — LinkedIn gönderisi. Açı kararı "Açık notlar"daki öneriyle başlar.
+- Adım 7: metin, eski gönderilere yorum, video ve kapak onaylandı (19 Kasım 2026). Sitedeki TR/EN tanıtım videosu linkleri yenilendi. Kalan: paylaşımı mesai dışında yapmak ve eski gönderilere yorumu eklemek (Kemal'de). Paylaşımdan önce Adım 1'den kalan Gumroad işi ($0+ ve sayfa metni) bitirilmeli.
+- Sonraki: Adım 8 (yeni pencere, Opus 5.5) — Show HN. LinkedIn paylaşımından birkaç gün sonra. Amaç: kendi ağının dışında tek seferlik talep testi ve tecrübe; ardından Adım 9'da dondur / yeniden değerlendir kararı. Show HN yapılmasına 19 Kasım'da karar verildi.
